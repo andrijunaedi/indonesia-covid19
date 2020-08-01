@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrijunaedi/indonesia-covid19-monitoring.git"
+    "url": "git+https://github.com/andrijunaedi/indonesia-covid19.git"
   },
   "author": "Andri Junaedi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrijunaedi/indonesia-covid19-monitoring/issues"
+    "url": "https://github.com/andrijunaedi/indonesia-covid19/issues"
   },
-  "homepage": "https://github.com/andrijunaedi/indonesia-covid19-monitoring#readme",
+  "homepage": "https://github.com/andrijunaedi/indonesia-covid19#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
