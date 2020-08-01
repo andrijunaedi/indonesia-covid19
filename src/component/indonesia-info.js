@@ -5,10 +5,6 @@ bendera.src = indonesia;
 
 class IndonesiaInfo extends HTMLElement {
 
-    constructor() {
-        super()
-    }
-
     set values(values) {
         this._values = values[0];
         this.render();

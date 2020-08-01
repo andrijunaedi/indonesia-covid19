@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
-
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -46,10 +44,4 @@ td {
 }
 .lokasi {
     font-size: 14px;
-}
-.app-footer {
-    background-color: #343a40!important;
-    color: white;
-    height: 70px;
-    padding: 15px;
 }

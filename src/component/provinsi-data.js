@@ -15,7 +15,7 @@ class ProvinsiData extends HTMLElement {
                             <th scope="col">Lokasi</th>
                             <th scope="col">Dikonfirmasi</th>
                             <th scope="col">Sembuh</th>
-                            <th scope="col">Meninggal dunia</th>
+                            <th scope="col">Meninggal</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
