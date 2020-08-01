@@ -1,8 +1,5 @@
 import "../component/indonesia-info.js";
-// import Favimg from "../img/favicon.ico";
-
-// const favicon = new Image();
-// favicon.src = Favimg;
+import "../component/provinsi-data";
 
 function main() {
 
@@ -25,6 +22,39 @@ function main() {
             })
     }
 
+    const getDataProvince = () => {
+        fetch('https://indonesia-covid-19.mathdro.id/api/provinsi')
+            .then(response => {
+                return response.json();
+            })
+            .then(responseJson => {
+                if (responseJson.error) {
+                    showResponseMessage(responseJson.message)
+                } else {
+                    renderAllProvince(responseJson.data)
+                    console.log(responseJson.data);
+                }
+            })
+            .catch(error => {
+                showResponseMessage(error)
+            })
+    }
+
+    const renderAllProvince = (provinces) => {
+        const tBodyElement = document.querySelector('tbody');
+        tBodyElement.innerHTML = "";
+
+        provinces.forEach(province => {
+            tBodyElement.innerHTML += `
+            <tr>
+                <th scope="row" class="lokasi">${province.provinsi}</th>
+                <td>${province.kasusPosi}</td>
+                <td>${province.kasusSemb}</td>
+                <td>${province.kasusMeni}</td>
+            </tr>`;
+        });
+    }
+
     const showResponseMessage = (message = "Check your internet connection") => {
         alert(message);
     };
@@ -33,15 +63,7 @@ function main() {
         indonesiaElement.values = results;
     }
 
-    // const setFavicons = Favimg => {
-    //     let headElement = document.querySelector('head');
-    //     let setFavicon = document.createElement('link');
-    //     setFavicon.setAttribute('rel', 'short icon');
-    //     setFavicon.setAttribute('href', Favimg);
-    //     headElement.appendChild(setFavicon);
-    // }
-
-    // setFavicons(Favimg);
+    getDataProvince();
     getDataIndo();
 }
 
